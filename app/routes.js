@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-const { translateText } = require('./controllers/translate');
+const { translateText, translatePage } = require('./controllers/translate');
 
 const router = Router({
   prefix: '/api/translate'
@@ -7,5 +7,6 @@ const router = Router({
 
 router.post('/text', translateText);
 router.get('/text', translateText);
+router.get('/page', translatePage);
 
 module.exports = router;
